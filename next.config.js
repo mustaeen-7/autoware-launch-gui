@@ -7,7 +7,7 @@ const nextConfig = {
     unoptimized: true,
     domains: ["avatars.githubusercontent.com", "images.unsplash.com"],
   },
-  output: "export",
+  // output: "export",
   distDir: "dist",
 }
 

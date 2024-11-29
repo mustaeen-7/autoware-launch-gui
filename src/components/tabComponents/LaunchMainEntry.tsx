@@ -29,7 +29,7 @@ const LaunchMainEntry = () => {
     <div className="flex h-full w-full flex-col gap-4">
       <Launch />
 
-      <div className="flex h-full w-full flex-row gap-4 font-mono">
+      {/* <div className="flex h-full w-full flex-row gap-4 font-mono">
         {cpusUsage.every((u) => u === 0) &&
         topProcesses[0].name === "process1" ? (
           <div
@@ -92,7 +92,7 @@ const LaunchMainEntry = () => {
             </div>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

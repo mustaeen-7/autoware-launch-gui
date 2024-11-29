@@ -38,6 +38,7 @@ import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { useToast } from "../ui/use-toast";
 import YAMLEdit from "./YamlEdit";
+import VehicalAndGoalPoseCards from "../VehicalAndGoalPoseCards";
 
 const Launch = () => {
   const [pidsLen, setPidsLen] = useAtom(pidsLengthAtom);
@@ -686,6 +687,12 @@ const Launch = () => {
         </div>
       </div>
       <YAMLEdit />
+      <div className="flex w-full flex-row gap-4">
+         <div className="flex w-full flex-col gap-4"> 
+            <VehicalAndGoalPoseCards/>
+         </div>
+      <div className="flex w-full flex-col gap-4"> </div>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,167 @@
+.container {
+  color: white;
+  font-family: Arial, sans-serif;
+
+  margin-bottom: 4rem;
+}
+
+.card {
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 1rem 0;
+  padding: 1rem;
+  /* background-color: #222; */
+}
+
+.parameterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.editButton {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgb(29, 40, 58);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.runButton {
+  background-color: transparent;
+
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #8b0000 !important;
+  color: white;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+  background-color: rgba(0, 0, 0);
+  border: 1px solid #fff;
+  max-height: 80%;
+  overflow-y: auto;
+  /* &::-webkit-scrollbar {
+    width: 5px;
+    margin: 4px 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #5c5a5a;
+    border-radius: 25px;
+    margin: 4px 0px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 25px;
+    background-color: #fffffff3;
+    margin: 4px 0px;
+  } */
+}
+
+.modalContent::-webkit-scrollbar {
+  width: 5px;
+  margin: 4px 0px;
+}
+.modalContent::-webkit-scrollbar-thumb {
+  background: #5c5a5a;
+  border-radius: 25px;
+  margin: 4px 0px;
+}
+.modalContent::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: #fffffff3;
+  margin: 4px 0px;
+}
+
+.description {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.inputGroup {
+  margin: 0.5rem 0;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resetButton,
+.updateButton {
+  background-color: transparent;
+  border: 1px solid #888;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.updateButton {
+  background-color: #008000;
+  color: white;
+}
+
+.errorText {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f3e9e9;
+}
+
+.closeButton:hover {
+  color: #fff; /* Highlight on hover */
+}
+
+.errorText {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  height: 1rem; /* Fixed height to prevent jerking */
+  display: flex;
+  align-items: center;
+  visibility: hidden; /* Initially hidden */
+}
+
+.errorText.visible {
+  visibility: visible; /* Show only when there's an error */
+}
