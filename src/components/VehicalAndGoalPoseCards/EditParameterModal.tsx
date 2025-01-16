@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import { SubParameter } from "./types";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 interface EditParameterModalProps {
   isVisible: boolean;
@@ -60,7 +63,7 @@ const EditParameterModal = ({
             &times;
           </button>
         </div>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 mb-4">
           <h3>Edit Parameter</h3>
           <span className={styles.description}>
             Enter the values of the parameter to add to the script
@@ -68,9 +71,11 @@ const EditParameterModal = ({
         </div>
         {Object.entries(formData).map(([key, field]) => (
           <div key={key} className={styles.inputGroup}>
-            <label>{field.label || key}</label>
-            <input
+            <Label>{field.label || key}</Label>
+            <div className="w-full">
+            <Input
               type="text"
+              className="w-full"
               //@ts-ignore
               value={field.value}
               onChange={(e) =>
@@ -90,18 +95,20 @@ const EditParameterModal = ({
             >
               {errors[key] || ""}
             </span>
+            </div>
           </div>
         ))}
         <div className={styles.modalActions}>
-          <button className={styles.resetButton} onClick={handleReset}>
+          <Button   variant="outline" className={styles.resetButton} onClick={handleReset}>
             Reset
-          </button>
-          <button
+          </Button>
+          <Button
+          variant="secondary"
             className={styles.updateButton}
             onClick={handleValidateAndSubmit}
           >
             Update
-          </button>
+          </Button>
         </div>
       </div>
     </div>

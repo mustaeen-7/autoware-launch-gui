@@ -1,7 +1,4 @@
 .container {
-  color: white;
-  font-family: Arial, sans-serif;
-
   margin-bottom: 4rem;
 }
 
@@ -21,7 +18,6 @@
 }
 .editButton {
   background-color: transparent;
-  color: white;
   border: 1px solid rgb(29, 40, 58);
   border-radius: 4px;
   padding: 0.5rem 1rem;
@@ -35,7 +31,6 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   background-color: #8b0000 !important;
-  color: white;
 }
 
 .modalOverlay {
@@ -54,8 +49,8 @@
   background-color: #222;
   padding: 2rem;
   border-radius: 8px;
-  width: 400px;
-  background-color: rgba(0, 0, 0);
+  width: 450px;
+  background-color: hsl(var(--background));
   border: 1px solid #fff;
   max-height: 80%;
   overflow-y: auto;
@@ -94,29 +89,35 @@
 .description {
   font-weight: 200;
   font-size: 14px;
+  text-align: center;
 }
 
 .inputGroup {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .inputGroup label {
   display: block;
   margin-bottom: 0.5rem;
+  width: 28%;
 }
 
-.inputGroup input {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #444;
+
+.inputGroup div {
+  align-self: flex-end;
+  width: 67%;
+
   border-radius: 4px;
-  background-color: #333;
-  color: white;
+
 }
 
 .modalActions {
   display: flex;
   justify-content: space-between;
+  margin-top: 16px;
 }
 
 .resetButton,
@@ -130,7 +131,6 @@
 
 .updateButton {
   background-color: #008000;
-  color: white;
 }
 
 .errorText {
@@ -145,11 +145,12 @@
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  color: #f3e9e9;
+  color: hsl(var(--foreground))
+  
 }
 
 .closeButton:hover {
-  color: #fff; /* Highlight on hover */
+  opacity: 0.5;
 }
 
 .errorText {
