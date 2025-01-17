@@ -54,7 +54,7 @@ const parameterCards: ParameterCardType[] = [
       {
         label: "Destination",
         pythonPath:
-          "/home/dev/goal_3.py", // Dynamic path
+          "/root/autoware_launch_scripts/goal_3.py", // Dynamic path
         subParameters: {
           goal_pose_x: {
             label: "2d goal Pose x",
@@ -82,7 +82,7 @@ const parameterCards: ParameterCardType[] = [
       {
         label: "Intermediate Stop 1",
         pythonPath:
-          "/home/dev/goal_1.py", // Dynamic path
+          "/root/autoware_launch_scripts/goal_1.py", // Dynamic path
         subParameters: {
           goal_pose_x: {
             label: "2d goal Pose x",
@@ -110,7 +110,7 @@ const parameterCards: ParameterCardType[] = [
       {
         label: "Intermediate Stop 2",
         pythonPath:
-          "/home/dev/goal_2.py", // Dynamic path
+          "/root/autoware_launch_scripts/goal_2.py", // Dynamic path
         subParameters: {
           goal_pose_x: {
             label: "2d goal Pose x",
