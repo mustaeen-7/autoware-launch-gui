@@ -22,7 +22,7 @@ const parameterCards: ParameterCardType[] = [
       {
         label: "Initial Pose",
         pythonPath:
-          "/home/dev/pose_estimate.py", // Dynamic path
+          "/root/autoware_launch_scripts/pose_estimate.py", // Dynamic path
         subParameters: {
           initial_pose_x: {
             label: "Initial Pose x",
